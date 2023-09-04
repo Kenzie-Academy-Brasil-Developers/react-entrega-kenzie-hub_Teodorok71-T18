@@ -1,7 +1,7 @@
 import { LoginForm } from "../../Components/Forms/LoginForm"
 
-export const LoginPage = () =>{
+export const LoginPage = ({setUser}) =>{
     return(
-        <LoginForm/>
+        <LoginForm setUser={setUser}/>
     )
 }

@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form"
 import { Select } from "../Select"
 import {zodResolver} from "@hookform/resolvers/zod"
 import { RegisterFormSchema } from "./registerFormSchema"
-import { api } from "../../../Services/api"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { UseContext } from "../../../providers/UseContext"
 
 export const RegisterForm = () =>{
 
@@ -14,23 +14,10 @@ export const RegisterForm = () =>{
     
     const [loading, setLoading] = useState(false)
 
-    const userRegister = async (formData) =>{
-        try {
-            setLoading(true)
-            await api.post("/users",formData)
-            alert("cadastro realizado com sucesso")
-        } catch (error) {
-            console.log(error)
-            if(error.response?.data === "Email already exists"){
-                alert("Usuário já cadastrado")
-            }
-        }finally{
-            setLoading(false)
-        }
-    }
+    const {userRegister} = useContext(UseContext)
 
     const submit = (formData) =>{
-        userRegister(formData)
+        userRegister(formData,setLoading)
     }
 
     return(

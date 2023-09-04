@@ -1,7 +1,15 @@
+import { useContext } from "react"
+import { UseContext } from "../../providers/UseContext"
 
 
 export const DashboardPage = () =>{
+    const{user,userLogout} =useContext(UseContext)
+
     return(
-        <h1>Dashboard</h1>
+        <div>
+            <h1>Dashboard</h1>
+            <p>{user?.name}</p>
+            <button onClick={userLogout}>Sair</button>
+            </div>
     )
 }

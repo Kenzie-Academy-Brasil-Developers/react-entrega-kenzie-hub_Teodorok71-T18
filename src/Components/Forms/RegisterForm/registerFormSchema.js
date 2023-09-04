@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod"
 
 export const RegisterFormSchema = z.object({
   name: z.string().min(1).max(255).nonempty("O nome é obrigatório."),
