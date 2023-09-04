@@ -1,0 +1,78 @@
+.buttomPink{
+    width: 324px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.625rem;
+
+    cursor: pointer;
+    border-radius: 4.0608px;
+    border: 1.2176px solid var(--color-primary);
+    background: var(--color-primary);
+    color: var(--white);
+}
+
+.buttomGrey{
+    width: 324px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    text-decoration: none;
+
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: 0.0761rem solid var(--grey-1);
+    background: var(--grey-1);
+    color: var(--grey-0);
+}
+.back{
+    width: 4.1875rem;
+    height: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+    text-decoration: none;
+    color: var(--grey-0);
+
+    border-radius: 0.25rem;
+    background: var(--grey-3);
+}
+
+.logout{
+    width: 4.1875rem;
+    height: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 1.75rem;
+    color: var(--grey-0);
+
+    border-radius: 4px;
+    background: var(--grey-3);
+}

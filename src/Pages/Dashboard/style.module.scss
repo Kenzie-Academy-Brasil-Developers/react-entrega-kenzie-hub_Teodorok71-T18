@@ -1,0 +1,33 @@
+.main{
+    flex-wrap: wrap;
+}
+
+.header{
+    width: 100%;
+    height: 4.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1208px;
+    margin-top: 8px;
+}
+.div{
+    width: 100%;
+    height: 7.375rem;
+
+    display: flex;
+    gap: 1088px;
+    justify-content: center;
+    align-items: center;
+  
+}
+.section{
+    width: 100%;
+    height: 7.375rem;
+
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    padding-left: 224px;
+}

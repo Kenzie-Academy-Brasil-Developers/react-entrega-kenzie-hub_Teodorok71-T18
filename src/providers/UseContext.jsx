@@ -10,24 +10,25 @@ export const UserProvider = ({children}) =>{
 
     const navigate = useNavigate ()
 
-    useEffect(() =>{
-        const getUser = async () =>{
-            const token = localStorage.getItem("@TOKEN")  
+    useEffect(() => {
+        const token = localStorage.getItem("@TOKEN")   
+        if (token) {
+          const getUser = async () => {
             try {
-                const {data} = await api.get("/profile",{
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    }
-                })
-                setUser(data)
-                navigate("dashboard")
+              const { data } = await api.get("/profile",{
+                headers: {
+                  Authorization: `Bearer ${token}`
+                },
+              });
+              setUser(data);
+              navigate("/dashboard")
             } catch (error) {
-               
-            }
-        }
-        getUser()
-    }, [])
- 
+           
+            } 
+          }
+         getUser()
+        } 
+      }, [])
 
     const userLogout = () =>{
         setUser(null)
@@ -44,7 +45,7 @@ export const UserProvider = ({children}) =>{
             setUser(data.user)
             localStorage.setItem("@TOKEN", data.token)
             localStorage.setItem("@USERID", data.user.id)
-            navigate("dashboard")
+            navigate("/dashboard")
             toast.success("Você está logado")
         } catch (error) {
             console.log(error)

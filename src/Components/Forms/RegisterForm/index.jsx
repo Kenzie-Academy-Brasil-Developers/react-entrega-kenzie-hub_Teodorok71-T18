@@ -5,6 +5,9 @@ import {zodResolver} from "@hookform/resolvers/zod"
 import { RegisterFormSchema } from "./registerFormSchema"
 import { useContext, useState } from "react"
 import { UseContext } from "../../../providers/UseContext"
+import { Link, } from "react-router-dom"
+import Logo from "../../../assets/Logo.svg"
+import styles from "./style.module.scss"
 
 export const RegisterForm = () =>{
 
@@ -21,7 +24,14 @@ export const RegisterForm = () =>{
     }
 
     return(
-        <form onSubmit={handleSubmit(submit)}>          
+        <main className={styles.main}>
+            <div className={styles.div}>
+                <img src={Logo} alt="Kenzie Hub imagem ilustrativa" />
+                <Link className="back" to="/">Voltar</Link>
+            </div>
+        <form className={styles.form} onSubmit={handleSubmit(submit)}> 
+            <h1 className="Title1">Crie sua conta</h1>
+            <label className="headline">Rapido e grátis, vamos nessa</label>        
             <Input  label="Nome" type="text" placeholder="Digite aqui seu nome" {...register ("name")} disabled={loading}/>
             {errors.name?.message}
             <Input  label="Email" type="email" placeholder="Digite aqui seu email" {...register ("email")} disabled={loading}/>
@@ -44,7 +54,8 @@ export const RegisterForm = () =>{
             {errors.course_module?.message}
 
 
-            <button disabled={loading}>Cadastrar</button>
+            <button className="buttomPink" disabled={loading}>Cadastrar</button>
         </form>
+        </main>
     )
 }
