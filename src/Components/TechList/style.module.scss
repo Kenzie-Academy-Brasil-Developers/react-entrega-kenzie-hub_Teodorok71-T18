@@ -1,0 +1,29 @@
+.main{
+    width: 780px;
+    height: 327px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+    
+}
+
+.ul{
+    width: 780px;
+    height: 274px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 4px;
+    background: #212529;
+}
+.div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    width: 100%;
+}

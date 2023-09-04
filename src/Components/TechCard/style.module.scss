@@ -1,0 +1,18 @@
+.li{
+    width: 732px;
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    background: #121214;
+}   
+
+.div{
+    display: flex;
+    gap: 1rem;
+}

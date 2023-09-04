@@ -7,6 +7,7 @@ export const UseContext = createContext({})
 
 export const UserProvider = ({children}) =>{
     const [user, setUser] = useState(null)
+    const [tech, setTech] = useState(null)
 
     const navigate = useNavigate ()
 
@@ -21,6 +22,7 @@ export const UserProvider = ({children}) =>{
                 },
               });
               setUser(data);
+              setTech(data.techs)
               navigate("/dashboard")
             } catch (error) {
            
@@ -74,7 +76,7 @@ export const UserProvider = ({children}) =>{
     }
 
     return(
-        <UseContext.Provider value={{user, userLogout, userLogin, userRegister}}>
+        <UseContext.Provider value={{user, userLogout, userLogin, userRegister, tech, setTech}}>
             {children}
         </UseContext.Provider>
     )
