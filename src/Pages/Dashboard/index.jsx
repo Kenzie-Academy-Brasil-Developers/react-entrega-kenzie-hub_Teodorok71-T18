@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { UseContext } from "../../providers/UseContext"
 import Logo from "../../assets/Logo.svg"
 import styles from "./style.module.scss"
+import { TechList } from "../../Components/TechList"
 
 export const DashboardPage = () =>{
     const{user,userLogout} =useContext(UseContext)
@@ -17,8 +18,7 @@ export const DashboardPage = () =>{
                 <span className="headlineb">{user.course_module}</span>
             </div>
             <section className={styles.section}>
-                <h2 className="Title1">Que pena! Estamos em desenvolvimento :( </h2>
-                <h3 className="Title2">Nossa aplicação está em desenvolvimento, em breve teremos novidades</h3>
+               <TechList/>
             </section>
         </main>
     )
